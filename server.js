@@ -11,8 +11,10 @@ const LEADS_FILE = path.join(__dirname, 'leads.csv');
 app.use(cors());
 app.use(express.json());
 
-// Serve static website files
-app.use(express.static(__dirname));
+// Serve static website files (supporting extensionless HTML routing)
+app.use(express.static(__dirname, {
+  extensions: ['html', 'htm']
+}));
 
 // Form submission endpoint
 app.post('/api/submit', (req, res) => {
