@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Vyloxgo</title>
+<meta name="description" content="Tell us about your business and we'll get back to you — Vyloxgo, WhatsApp AI agents and growth systems for Hyderabad businesses.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .form-card{ background:var(--paper); border:1px solid var(--line); border-radius: var(--radius-l); padding: 40px; max-width: 640px; margin: 0 auto; }
+  @media (max-width:640px){ .form-card{ padding: 28px 22px; } }
+
+  .field-group{ margin-bottom: 22px; }
+  .field-group label{
+    display:block; font-family: var(--display); font-weight: 600; font-size: .92rem;
+    margin-bottom: 8px; color: var(--ink);
+  }
+  .field-group .hint{ font-size:.78rem; color: var(--muted); margin-top:6px; }
+
+  .field-group input[type="text"],
+  .field-group input[type="tel"],
+  .field-group select{
+    width:100%;
+    padding: 13px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: .96rem;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .field-group input:focus,
+  .field-group select:focus{
+    outline:none;
+    border-color: var(--accent);
+    background: var(--paper);
+  }
+  .field-group input.invalid, .field-group select.invalid{ border-color:#D9432B; }
+  .error-msg{ font-size:.78rem; color:#D9432B; margin-top:6px; display:none; }
+  .field-group.has-error .error-msg{ display:block; }
+
+  select{ appearance:none; -webkit-appearance:none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%234A4A42' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position: right 16px center; padding-right: 40px; }
+
+  #otherTypeGroup{ display:none; }
+
+  .submit-btn{ width:100%; justify-content:center; margin-top: 6px; }
+  .submit-btn:disabled{ opacity:.6; cursor:not-allowed; transform:none; }
+
+  .form-success, .form-error{ display:none; text-align:center; padding: 20px 0; }
+  .form-success.show, .form-error.show{ display:block; }
+  .form-success .icon{ font-size:2.4rem; margin-bottom:10px; }
+
+  .privacy-note{ font-size:.78rem; color:var(--muted); text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h13M13 6l6 6-6 6" stroke="#F3F1EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      vyloxgo
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services &amp; Pricing</a></li>
+      <li><a href="demo.html">See It Work</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-dark"><span class="long">Contact</span> Us</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span class="burger"><span></span><span></span><span></span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section style="padding-bottom:20px;">
+    <div class="wrap" style="text-align:center;">
+      <span class="eyebrow reveal">Let's talk about your business</span>
+      <h1 class="reveal" style="margin: .5em auto 0; font-size:clamp(2rem,4.6vw,3rem); max-width:640px;">
+        Tell us a bit about your business — we'll take it from there.
+      </h1>
+      <p class="reveal" style="max-width:520px; margin:0 auto;">Fill this in and it lands straight in our system. No back-and-forth — we'll reach out on the number you give us.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="form-card reveal">
+
+        <form id="contactForm" novalidate>
+          <div class="field-group">
+            <label for="fullName">Your name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your Full Name" autocomplete="name" required>
+            <div class="error-msg">Please enter your name.</div>
+          </div>
+
+          <div class="field-group">
+            <label for="businessName">Business name</label>
+            <input type="text" id="businessName" name="businessName" placeholder="e.g. Home Innovation Interiors" autocomplete="organization" required>
+            <div class="error-msg">Please enter your business name.</div>
+          </div>
+
+          <div class="field-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your Phone number" autocomplete="tel" inputmode="numeric" required>
+            <div class="error-msg">Please enter a valid phone number.</div>
+          </div>
+
+          <div class="field-group">
+            <label for="businessType">Type of business</label>
+            <select id="businessType" name="businessType" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Interior Designers">Interior Designers</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Other">Other — type it below</option>
+            </select>
+            <div class="error-msg">Please select a business type.</div>
+          </div>
+
+          <div class="field-group" id="otherTypeGroup">
+            <label for="otherType">Tell us what kind of business</label>
+            <input type="text" id="otherType" name="otherType" placeholder="e.g. salon, gym, clinic...">
+            <div class="error-msg">Please tell us what kind of business.</div>
+          </div>
+
+          <button type="submit" class="btn btn-accent submit-btn" id="submitBtn">Submit details</button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="icon">✅</div>
+          <h3 style="font-size:1.2rem;">Thanks — we've got your details.</h3>
+          <p>We'll reach out on WhatsApp or call shortly. In the meantime, feel free to look at <a href="services.html" style="color:var(--accent); font-weight:600;">pricing</a> or <a href="demo.html" style="color:var(--accent); font-weight:600;">watch the demo</a>.</p>
+        </div>
+
+        <div class="form-error" id="formError">
+          <div class="icon">⚠️</div>
+          <h3 style="font-size:1.2rem;">Something didn't go through.</h3>
+          <p>No problem — message us directly instead and we'll take it from there.</p>
+          <a href="https://www.instagram.com/vyloxgo" target="_blank" rel="noopener" class="btn btn-dark" style="margin-top:10px;">Message on Instagram</a>
+        </div>
+
+        <p class="privacy-note">We only use these details to get in touch about your project. No spam.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h13M13 6l6 6-6 6" stroke="#14140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          vyloxgo
+        </a>
+        <p>Growth systems for businesses that want more customers, not more software to manage.</p>
+        <a href="contact.html" class="btn btn-accent" style="margin-top:16px;">Contact Us</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services &amp; Pricing</a>
+          <a href="demo.html">See It Work</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Reach us</h4>
+          <a href="https://www.vyloxgo.com" target="_blank" rel="noopener">vyloxgo.com</a>
+          <a href="https://www.instagram.com/vyloxgo" target="_blank" rel="noopener">@vyloxgo on Instagram</a>
+          <a href="mailto:vylox@gmail.com">vylox@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vyloxgo. Scale fast. Automate smarter.</span>
+      <span>Hyderabad, Telangana</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

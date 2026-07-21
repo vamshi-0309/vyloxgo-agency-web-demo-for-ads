@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Vyloxgo</title>
+<meta name="description" content="Vyloxgo's own website, Instagram and the systems behind them — proof of the work before you hire us.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .proof-card{ background:var(--paper); border:1px solid var(--line); border-radius: var(--radius-l); overflow:hidden; }
+  .proof-shot{ border-bottom:1px solid var(--line); background:#0B0B09; }
+  .proof-shot img{ width:100%; display:block; }
+  .proof-body{ padding: 26px 30px 30px; }
+  .browser-chrome{ display:flex; gap:6px; padding:10px 14px; background:#1a1a1a; }
+  .browser-chrome span{ width:9px; height:9px; border-radius:50%; background:#444; }
+  .contact-row{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding: 20px 0; border-top:1px solid var(--line); }
+  .contact-row:first-child{ border-top:none; }
+  .contact-row .label{ font-family:var(--mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
+  .contact-row .value{ font-family:var(--display); font-weight:600; font-size:1.05rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h13M13 6l6 6-6 6" stroke="#F3F1EA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      vyloxgo
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services &amp; Pricing</a></li>
+      <li><a href="demo.html">See It Work</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-dark"><span class="long">Contact</span> Us</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span class="burger"><span></span><span></span><span></span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section style="padding-bottom:20px;">
+    <div class="wrap">
+      <span class="eyebrow reveal">Proof before you hire us</span>
+      <h1 class="reveal" style="margin-top:.5em; font-size:clamp(2rem,4.6vw,3.2rem); max-width:720px;">
+        We run our own agency on the exact systems we're pitching you.
+      </h1>
+      <p class="reveal" style="max-width:600px;">This website, the Instagram page, and the WhatsApp agent on the previous page are all built and run by Vyloxgo — for Vyloxgo. Have a look around.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap grid-2">
+
+      <div class="proof-card reveal">
+        <div class="proof-shot">
+          <div class="browser-chrome"><span></span><span></span><span></span></div>
+          <img src="assets/instagram-profile-cropped.png" alt="Screenshot of the Vyloxgo Instagram business page">
+        </div>
+        <div class="proof-body">
+          <span class="tag">Instagram · @vyloxgo</span>
+          <h3 style="margin-top:.6em; font-size:1.3rem;">Growth Systems, showcased live</h3>
+          <p>Our own Instagram page — the same weekly content cadence and setup we build for interior design and real estate clients.</p>
+          <a href="https://www.instagram.com/vyloxgo" target="_blank" rel="noopener" class="btn btn-ghost">View @vyloxgo →</a>
+        </div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-shot" style="background:var(--ink); padding: 46px 30px; text-align:center;">
+          <div style="font-family:var(--display); font-weight:700; font-size:1.8rem; color:var(--bg);">vyloxgo.com</div>
+          <p style="color:rgba(243,241,234,.6); margin:10px 0 0;">Premium websites + AI automation for scaling businesses</p>
+        </div>
+        <div class="proof-body">
+          <span class="tag">Website · vyloxgo.com</span>
+          <h3 style="margin-top:.6em; font-size:1.3rem;">The agency's own site</h3>
+          <p>Where we host our full case studies, service breakdowns, and contact details — built the same way we'd build yours.</p>
+          <a href="https://www.vyloxgo.com" target="_blank" rel="noopener" class="btn btn-ghost">Visit vyloxgo.com →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What we build with</span>
+        <h2 style="margin-top:.6em;">The stack behind every system</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <h3 style="font-size:1.1rem;">Custom websites</h3>
+          <p>Hand-built pages designed around your business, not a generic template — like this one.</p>
+        </div>
+        <div class="card reveal">
+          <h3 style="font-size:1.1rem;">Automation systems</h3>
+          <p>WhatsApp agents and workflow automation that save real hours every week.</p>
+        </div>
+        <div class="card reveal">
+          <h3 style="font-size:1.1rem;">Growth tools</h3>
+          <p>Instagram management and Meta ad campaigns that turn attention into leads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin:0 auto 40px; text-align:center; max-width:520px;">
+        <span class="eyebrow" style="background:transparent; border-color:rgba(243,241,234,.3); color:rgba(243,241,234,.7);">Talk to us</span>
+        <h2 style="margin-top:.6em; color:var(--bg);">Get in touch</h2>
+      </div>
+      <div class="card" style="max-width:640px; margin:0 auto; background:rgba(243,241,234,.04); border-color:rgba(243,241,234,.15);">
+        <div class="contact-row">
+          <span class="label" style="color:rgba(243,241,234,.45);">Website</span>
+          <a class="value" style="color:var(--bg);" href="https://www.vyloxgo.com" target="_blank" rel="noopener">vyloxgo.com</a>
+        </div>
+        <div class="contact-row" style="border-color:rgba(243,241,234,.15);">
+          <span class="label" style="color:rgba(243,241,234,.45);">Instagram</span>
+          <a class="value" style="color:var(--bg);" href="https://www.instagram.com/vyloxgo" target="_blank" rel="noopener">@vyloxgo</a>
+        </div>
+        <div class="contact-row" style="border-color:rgba(243,241,234,.15);">
+          <span class="label" style="color:rgba(243,241,234,.45);">Email</span>
+          <a class="value" style="color:var(--bg);" href="mailto:vylox@gmail.com">vylox@gmail.com</a>
+        </div>
+        <div class="contact-row" style="border-color:rgba(243,241,234,.15);">
+          <span class="label" style="color:rgba(243,241,234,.45);">Base</span>
+          <span class="value">Hyderabad, Telangana</span>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:30px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-accent">Contact Us</a>
+        <a href="services.html" class="btn btn-ghost-light">See packages &amp; pricing</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h13M13 6l6 6-6 6" stroke="#14140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          vyloxgo
+        </a>
+        <p>Growth systems for businesses that want more customers, not more software to manage.</p>
+        <a href="contact.html" class="btn btn-accent" style="margin-top:16px;">Contact Us</a>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services &amp; Pricing</a>
+          <a href="demo.html">See It Work</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Reach us</h4>
+          <a href="https://www.vyloxgo.com" target="_blank" rel="noopener">vyloxgo.com</a>
+          <a href="https://www.instagram.com/vyloxgo" target="_blank" rel="noopener">@vyloxgo on Instagram</a>
+          <a href="mailto:vylox@gmail.com">vylox@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vyloxgo. Scale fast. Automate smarter.</span>
+      <span>Hyderabad, Telangana</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
